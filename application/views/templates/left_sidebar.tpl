@@ -8,16 +8,16 @@
                 </a>
             </li>
             <li>
-                <a href="{$base_url}/income">Khoản thu</a>
+                <a href="{$base_url}">Quản lý tài khoản</a>
             </li>
             <li>
-                <a href="{$base_url}/expenditure">Khoản chi</a>
+                <a href="{$base_url}">Tạo đơn</a>
             </li>
             <li>
-                <a href="{$base_url}/loan">Khoản cho vay</a>
+                <a href="{$base_url}">Đăng ký thực tập</a>
             </li>
             <li>
-                <a href="{$base_url}/debt">Khoản nợ</a>
+                <a href="{$base_url}">Xin giấy giới thiệu</a>
             </li>
         </ul>
     </div>

@@ -17,7 +17,7 @@ class Login extends CI_Controller
         $this->smarty->view('login.tpl');
     }
     public function do_login(){
-        $this->form_validation->set_rules('email-login', 'Email', 'trim|required|xss_clean');
+        $this->form_validation->set_rules('user-login', 'Email', 'trim|required|xss_clean');
         $this->form_validation->set_rules('passwd-login', 'Mật khẩu', 'trim|required|xss_clean|callback_check_database');
 
         if($this->form_validation->run() == FALSE)
@@ -35,10 +35,10 @@ class Login extends CI_Controller
     function check_database($password)
     {
         //Field validation succeeded.  Validate against database
-        $email = $this->input->post('email-login');
+        $username = $this->input->post('user-login');
 
         //query the database
-        $result = $this->user_model->login($email, $password);
+        $result = $this->user_model->login($username, $password);
 
         if($result)
         {
@@ -47,7 +47,7 @@ class Login extends CI_Controller
             {
                 $sess_array = array(
                     'id' => $row->id,
-                    'email' => $row->email
+                    'username' => $row->username
                 );
                 $this->session->set_userdata('logged_in', $sess_array);
             }
@@ -78,7 +78,7 @@ class Login extends CI_Controller
             echo "successfull";
         }
     }
-    function check_email_exist($email)
+    function check_user_exist($email)
     {
         $real_name = $this->input->post('real_name');
         $passwd = $this->input->post('passwd');

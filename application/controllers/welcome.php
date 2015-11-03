@@ -22,9 +22,7 @@ function __construct(){
     }
 	public function index()
 	{
-		//$this->load->view('welcome_message');
-//$this->load->library('smarty');
-                $this->smarty->view('login.tpl');
+		$this->smarty->view('login.tpl');
 	}
 }
 

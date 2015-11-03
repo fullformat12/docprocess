@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{$base_url}/images/favicon.png">
-    <title>Hệ thống quản lý tài chính hộ gia đình</title>
+    <title>Đại học Bách Khoa Hà Nội</title>
     <!-- Bootstrap core CSS -->
     <link href="{$base_url}/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link href="{$base_url}/css/style.css" rel="stylesheet">

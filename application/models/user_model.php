@@ -1,13 +1,12 @@
 <?php
 Class User_model extends CI_Model
 {
-    function login($email, $passwd)
+    function login($username, $passwd)
     {
-        $this -> db -> select('id, email, passwd');
+        $this -> db -> select('id, username, password');
         $this -> db -> from('user');
-        $this -> db -> where('email',$email);
-        $this -> db -> where('passwd',MD5($passwd));
-        $this -> db -> limit(1);
+        $this -> db -> where('username',$username);
+        $this -> db -> where('password',MD5($passwd));
 
         $query = $this -> db -> get();
 
@@ -21,7 +20,7 @@ Class User_model extends CI_Model
         }
 
     }
-    function check_email_exist($email){
+    function check_username_exist($email){
         $this -> db -> select('email');
         $this -> db -> from('user');
         $this -> db -> where('email',$email);
